@@ -1,0 +1,197 @@
+doctype html
+
+html(lang='en-US')
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='node_modules/modern-normalize/modern-normalize.css')
+    link(rel='stylesheet' href='./assets/styles/index.css')
+    title DL Landing
+
+  body(id="home")
+    header.header.container-secondary
+      div.header__logo
+        img.logo(src="/assets/images/png/Logo.png")
+      nav
+        ul.header__nav
+          li
+            a(href="#home")  Home
+          li
+            a(href="#features")  Features
+          li
+            a(href="#pricing")  Pricing
+          li
+            a(href="#contact")  Contact
+
+      div.header__buttons
+        button.header__button.app-smal-button(type="button") Log In
+        button.header__button.app-primari-button(type="button") Get Started
+
+
+      div.menu
+        input(id="menu__toggle" type="checkbox")
+        label.menu__btn( for="menu__toggle")
+          span  
+        div.menu__box(id="menu-box")
+          div.menu__header 
+            img(src="/assets/images/Logo.png" width=78.08 height=28.49)
+            div
+            input(id="menu__toggle" type="checkbox")
+            label.menu__btn--in( for="menu__toggle")
+              span 
+          ul.menu__list
+            li
+              a.menu__item(id="#submenu" href="#home")  Home
+            li
+              a.menu__item(id="#submenu" href="#features")  Features
+            li
+              a.menu__item(id="#submenu" href="#pricing")  Pricing
+            li
+              a.menu__item(id="#submenu" href="#contact")  Contact
+          div.menu__buttons
+            button.menu__button.app-smal-button(type="button") Log In
+            button.menu__button.app-primari-button(type="button") Get Started
+
+    main.main.container
+      section.main__section.main__section--hero
+        div.hero__title
+          h1.title__contents Let’s get fusely together
+          p.title__description Outcome-centered product that reduce churn, optimize pricing, and grow your subscription business end-to-end.
+          button.app-primari-button(type="button") Get Started
+        div.wrapper.exmp  
+          img(src="./assets/images/png/girl-pen.png" alt="girl and pen" width="100%")
+      section.main__section--compani 
+        ul.main__compani
+          li
+            svg.main__compani--logo(width="100" height="27")
+              use(href="./assets/images/svg/symbol-defs.svg#icon-binator-logo")
+          li
+            svg.main__compani--logo(width="100" height="27")
+              use(href="./assets/images/svg/symbol-defs.svg#icon-buyme-logo")
+          li
+            svg.main__compani--logo(width="100" height="27")
+              use(href="./assets/images/svg/symbol-defs.svg#icon-loogipsum-logo")
+          li
+            svg.main__compani--logo(width="100" height="27")
+              use(href="./assets/images/svg/symbol-defs.svg#icon-umbrella-logo")
+          li
+            svg.main__compani--logo(width="100" height="27")
+              use(href="./assets/images/svg/symbol-defs.svg#icon-square-logo")
+      section.main__section.section.main__section--row(id="features")
+        div.main__title.main__title--row
+          h2.title__contents Detailed Examination
+          p.title__description A daily dataset to keep you up to date on subscription market trends and what's happening in your vertical.
+          button.app-tittle-button(type="button") Learn more 
+        div.wrapper.exmp
+          img(src="./assets/images/png/girl-list.png" alt="girl and list" width="100%")  
+      section.main__section.section
+        div.main__title
+          h2.title__contents Creative Solutions
+          p.title__description Creativity is our second name. We're full of inventive ideas and we're happy to present them to you.
+          button.app-tittle-button(type="button") Learn more
+        div.wrapper.exmp 
+          img(src="./assets/images/png/girl-lightbulb.png" alt="girl and lightbulb" width="100%")
+      section.main__section.section__pricing
+        h2.title__pricing(id="pricing") Choose your plan
+        ul.pricing 
+          li.pricing__light 
+            p Starter
+            h2 Free
+
+            p Dashboard
+            p Limited Support
+            p Forever free
+            button.app-primari-button(type="button") Get Started
+          li.pricing__hover 
+            p Premium
+            h2 $29
+              span.title__contents--span /month
+
+            p  Dashboard & Analysis
+            p  Premium Support
+            p  Tracking Service
+            button.app-secondary-button(type="button") Get Started
+          li.pricing__light
+            p Enterprise
+            h2 $49
+              span.title__contents--span /month
+
+            p  All features in 
+              span.title__contents--span Premium
+            p  Realtime overview
+            p Mobile app
+            button.app-primari-button(type="button") Get Started
+      section.main__section.form
+        h2.form__title Interested in getting fusely?
+        form.form__flex(onsubmit="return false")
+          div.form__flex--box 
+            div.form__input
+              input.input-field(type="text" placeholder="Name" pattern="^[a-zA-Z\s]+$" required) 
+              input.input-field(type="email" placeholder="Email address" required)
+            textarea.textarea-field( maxlength="400" placeholder="Message")
+            div.counter
+              span.current 0
+              span.total /400 
+          button.app-secondary-button.form__button(type="submit") Let’s talk
+
+    footer.footer(id="contact")
+      div.footer__contact.container-secondary
+        div     
+          h3 Product
+          ul 
+            li
+              a(href="https://www.google.com/") How it works
+            li
+              a(href="https://www.google.com/") Features
+            li
+              a(href="https://www.google.com/") Pricing 
+            li
+              a(href="https://www.google.com/") FAQ 
+            li
+              a(href="https://www.google.com/") Download 
+        div    
+          h3 Company
+          ul 
+            li
+              a(href="https://www.google.com/") About 
+            li
+              a(href="https://www.google.com/") Blog 
+            li
+              a(href="https://www.google.com/") Partnership 
+            li
+              a(href="https://www.google.com/") Terms of use
+            li
+              a(href="https://www.google.com/") Privacy policy
+        div     
+          h3 Support
+          ul 
+            li
+              a(href="https://www.google.com/") Help center 
+            li
+              a(href="https://www.google.com/") Contact us 
+        div    
+          h3 Get in touch
+          ul.footer__social 
+            li 
+              a(href="https://uk-ua.facebook.com/")  
+                svg(width="15" height="15") 
+                  use(href="./assets/images/svg/symbol-defs.svg#icon-facebook")
+            li 
+              a(href="https://twitter.com/")  
+                svg(width="15" height="15") 
+                  use(href="./assets/images/svg/symbol-defs.svg#icon-twitter")
+            li 
+              a(href="https://ru.linkedin.com/")  
+                svg(width="15" height="15") 
+                  use(href="./assets/images/svg/symbol-defs.svg#icon-linkedin")
+      div.footer__license.container-secondary 
+        svg(width="60" height="21.3")  
+          use(href="./assets/images/svg/symbol-defs.svg#icon-logo")
+        p © Fusely 2021. All rights reserved. 
+
+
+
+  script(src="./index.js") 
+

@@ -1,0 +1,20 @@
+%shadow {
+  background-color: var(--primary-color);
+  color: var(--secondary-text-color);
+  box-shadow: toRem(0px) toRem(3px) toRem(1px) rgba(0, 0, 0, 0.1),
+    toRem(0px) toRem(1px) toRem(2px) rgba(0, 0, 0, 0.08),
+    toRem(0px) toRem(2px) toRem(2px) rgba(0, 0, 0, 0.12);
+  border-radius: toRem(4px);
+  transition: all 0.15s ease-in-out;
+}
+
+%shadow-title {
+  background-color: var(--tittle-button-color);
+  color: var(--secondary-color);
+  box-shadow: toRem(0px) toRem(3px) toRem(1px) rgba(0, 0, 0, 0.1),
+    toRem(0px) toRem(1px) toRem(2px) rgba(0, 0, 0, 0.08),
+    toRem(0px) toRem(2px) toRem(2px) rgba(0, 0, 0, 0.12);
+  border-radius: toRem(4px);
+  transition: all 0.15s ease-in-out;
+}
+

@@ -1,0 +1,133 @@
+$xxs: 0px;
+$xs: 320px;
+$sm: 480px;
+$md: 768px;
+$lg: 1200px;
+
+@mixin respond-to($media) {
+  @if $media == xxs {
+    @media screen and (min-width: $xxs) {
+      @content;
+    }
+  } @else if $media == xs {
+    @media screen and (min-width: $xs - 1px) {
+      @content;
+    }
+  } @else if $media == xs-max {
+    @media screen and (max-width: $xs) {
+      @content;
+    }
+  } @else if $media == sm {
+    @media screen and (min-width: $sm - 1px) {
+      @content;
+    }
+  } @else if $media == sm-max {
+    @media screen and (max-width: $sm) {
+      @content;
+    }
+  } @else if $media == md {
+    @media screen and (min-width: $md - 1px) {
+      @content;
+    }
+  }
+  @else if $media == md-lg {
+    @media screen and (min-width: $md) and (max-width: $lg - 1px) {
+      @content;
+    }
+  }
+  @else if $media == lg {
+    @media screen and (min-width: $lg) {
+      @content;
+    }
+  } @else if $media == lg-max {
+    @media screen and (max-width: $lg) {
+      @content;
+    }
+  } @else if $media == xxs-xs {
+    @media (min-width: $xxs) and (max-width: $xs - 1px) {
+      @content;
+    }
+  } @else if $media == xxs-sm {
+    @media (min-width: $xxs) and (max-width: $sm - 1px) {
+      @content;
+    }
+  }@else if $media == xxs-md {
+    @media (min-width: $xxs) and (max-width: $md - 1px) {
+      @content;
+    }
+  }
+   @else if $media == xs-sm {
+    @media (min-width: $xs - 1px) and (max-width: $sm - 1px) {
+      @content;
+    }
+  } @else if $media == xs-md {
+    @media (min-width: $xs - 1px) and (max-width: $md - 1px) {
+      @content;
+    }
+  } @else if $media == sm-md {
+    @media (min-width: $sm - 1px) and (max-width: $md - 1px) {
+      @content;
+    }
+  } @else if $media == md-lg {
+    @media (min-width: $md - 1px) and (max-width: $lg - 1px) {
+      @content;
+    }
+  } @else if $media == sm-lg {
+    @media (min-width: $sm - 1px) and (max-width: $lg - 1px) {
+      @content;
+    }
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: toRem(1px);
+  height: toRem(1px);
+  margin: toRem(-1px);
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin main-smal-text {
+  font-family: Open Sans;
+  font-weight: normal;
+  font-size: toRem(20px);
+  line-height: 1.7;
+}
+
+@mixin main-middle-text {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: toRem(18px);
+  line-height: 1.444;
+}
+
+@mixin main-large-text {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-size: toRem(14px);
+  line-height: 1.117;
+}
+
+@mixin footer-smal-text {
+  font-family: 'Open Sans';
+  font-size: toRem(12px);
+  line-height: 1.333;
+}
+
+@mixin footer-middle-text {
+  font-family: 'Open Sans';
+  font-size: toRem(16px);
+  line-height: 1.625;
+}
+
+@mixin footer-large-text {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: toRem(18px);
+  line-height: 1.333;
+}

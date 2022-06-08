@@ -1,0 +1,114 @@
+@import 'node_modules/modern-normalize/modern-normalize.css';
+@import './mixins.scss';
+@import './functions.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+}
+
+body,
+html {
+  width: 100%;
+  font-family: Playfair Display, Open Sans, sans-serif;
+  scroll-behavior: smooth;
+  letter-spacing: 0.03em;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+svg {
+  display: inline-block;
+}
+
+.container-secondary {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+@include respond-to(xxs-xs) {
+  .container {
+    max-width: 320px;
+    padding: 0 toRem(20px) 0 toRem(20px);
+  }
+  .container-secondary {
+    max-width: 90vw;
+  }
+}
+
+@include respond-to(xs-md) {
+  .container {
+    max-width: 480px;
+    padding: 0 toRem(20px) 0 toRem(20px);
+  }
+  .container-secondary {
+    max-width: 90vw;
+  }
+}
+
+@include respond-to(md-lg) {
+  .container {
+    max-width: 768px;
+    padding: 0 toRem(40px) 0 toRem(40px);
+  }
+  .container-secondary {
+    max-width: 90vw;
+  }
+}
+
+@include respond-to(lg) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .container-secondary {
+    max-width: 1300px;
+  }
+}

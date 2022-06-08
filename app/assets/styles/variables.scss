@@ -1,0 +1,17 @@
+@import './app-colors.scss';
+
+:root {
+  --primary-color: #{$light-blue};
+  --secondary-color: #{$very-dark-grayish-blue};
+  --text-color: #{$dark-grayish-violet};
+  --text-color-alpha: #{$dark-grayish-violet-alpha};
+  --secondary-text-color: #{$white};
+  --secondary-text-color-alpha: #{$gray-white-alpha};
+  --neutral-color: #{$dark-grayish-blue};
+  --tittle-button-color: #{$pervanche};
+  --background-form-fields: #{$ghost-white};
+  --title-form-color: #{$purpure};
+
+  --tru-color: #{$green};
+  --false-color: #{$red};
+}

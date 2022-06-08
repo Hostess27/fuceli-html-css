@@ -1,0 +1,214 @@
+@import './mixins.scss';
+
+.form {
+  background-color: var(--secondary-color);
+  .input-field[type='text'],
+  .input-field[type='email'] {
+    &:invalid:not(:focus):not(:placeholder-shown) {
+      border: toRem(2px) solid var(--false-color);
+    }
+  }
+
+  .input-field:valid {
+    border: toRem(2px) solid var(--tru-color);
+  }
+
+  .textarea-field {
+    background-color: var(--background-form-fields);
+    padding: toRem(16px) toRem(30px);
+    margin-bottom: toRem(40px);
+    &::placeholder {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: toRem(18px);
+      line-height: 1.144;
+      color: var(--title-form-color);
+    }
+    @include respond-to(sm) {
+      width: toRem(356px);
+      height: toRem(166px);
+    }
+  }
+  .form__button {
+    color: var(--secondary-text-color);
+    background-color: var(--primary-color);
+    font-weight: bold;
+    font-size: toRem(16px);
+    line-height: 1.375;
+  }
+
+  @include respond-to(xxs-sm) {
+    position: relative;
+    padding: toRem(80px) toRem(45px) toRem(80px) toRem(45px);
+    width: 100vw;
+    .input-field {
+      background-color: var(--background-form-fields);
+      margin-bottom: toRem(20px);
+      width: 100%;
+      height: 100%;
+      padding: toRem(16px) toRem(30px);
+      border: none;
+      &::placeholder {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: toRem(18px);
+        line-height: 1.144;
+        color: var(--title-form-color);
+      }
+    }
+    .textarea-field {
+      background-color: var(--background-form-fields);
+      width: 100%;
+      height: toRem(166px);
+      &::placeholder {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: toRem(18px);
+        line-height: 1.144;
+        color: var(--title-form-color);
+      }
+    }
+  }
+
+  @include respond-to(sm-lg) {
+    padding: toRem(80px) toRem(74px) toRem(80px) toRem(74px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    .input-field {
+      border: none;
+      margin-bottom: toRem(20px);
+      width: toRem(339px);
+      height: toRem(58px);
+      padding: toRem(16px) toRem(30px);
+      background-color: var(--background-form-fields);
+      &::placeholder {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: toRem(18px);
+        line-height: 1.144;
+        color: var(--title-form-color);
+      }
+    }
+    .textarea-field {
+      max-width: toRem(338px);
+      max-height: toRem(166px);
+      background-color: var(--background-form-fields);
+      &::placeholder {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: toRem(18px);
+        line-height: 1.144;
+        color: var(--title-form-color);
+      }
+    }
+  }
+
+  @include respond-to(lg) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: toRem(80px) toRem(74px);
+    transform: translateY(15%);
+    z-index: 1;
+    .input-field {
+      border: none;
+      width: 356px;
+      height: toRem(58px);
+      padding: toRem(16px) toRem(30px);
+      background-color: var(--background-form-fields);
+      &::placeholder {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: toRem(18px);
+        line-height: 1.144;
+        color: var(--title-form-color);
+      }
+      &:not(:last-child) {
+        margin-bottom: toRem(20px);
+        margin-right: toRem(40px);
+      }
+    }
+  }
+}
+
+.form__title {
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  margin-bottom: toRem(40px);
+  color: var(--background-form-fields);
+  @include respond-to(sm-max) {
+    font-size: toRem(34px);
+    line-height: 1.176;
+    text-align: center;
+    letter-spacing: -1px;
+  }
+  @include respond-to(sm-lg) {
+    text-align: center;
+    font-size: toRem(50px);
+    line-height: 1.12;
+    letter-spacing: -1px;
+  }
+  @include respond-to(lg) {
+    text-align: start;
+    font-size: toRem(50px);
+    line-height: 1.12;
+    letter-spacing: -1px;
+  }
+}
+.form__flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter {
+  position: absolute;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: toRem(16px);
+  line-height: 1.625;
+  color: var(--title-form-color);
+
+  @include respond-to(xxs) {
+    bottom: toRem(189px);
+    right: toRem(60px);
+  }
+  @include respond-to(sm) {
+    bottom: toRem(56px);
+    right: toRem(25px);
+  }
+}
+
+.form__flex--box {
+  @include respond-to(sm-lg) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+  }
+  @include respond-to(lg) {
+    position: relative;
+    display: flex;
+    width: max-content;
+  }
+}
+.form__input {
+  @include respond-to(sm-lg) {
+    display: flex;
+    flex-direction: column;
+  }
+  @include respond-to(lg) {
+    display: flex;
+    flex-direction: column;
+  }
+}

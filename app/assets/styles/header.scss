@@ -1,0 +1,84 @@
+@import './functions.scss';
+@import './mixins.scss';
+
+.logo {
+  width: toRem(78px);
+  height: toRem(28px);
+}
+
+@include respond-to(lg-max) {
+  .header__logo {
+    display: flex;
+  }
+
+  .header__nav {
+    @include visually-hidden;
+  }
+
+  .header__button {
+    @include visually-hidden;
+  }
+}
+
+.header {
+  @include respond-to(xxs-sm) {
+    padding: toRem(20px) toRem(20px) toRem(40.51px) toRem(20px);
+  }
+
+  @include respond-to(sm-lg) {
+    padding: toRem(40px) 0 toRem(55.51px) toRem(20px);
+  }
+  @include respond-to(lg) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: toRem(40px) 0 toRem(99.42px) 0;
+  }
+}
+
+@include respond-to(lg) {
+  .header__buttons {
+    .header__button {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: toRem(16px);
+      line-height: 1.375;
+      &:not(:last-child) {
+        margin-right: toRem(16px);
+        color: var(--primary-color);
+        background-color: var(--secondary-text-color);
+      }
+      &:not(:first-child) {
+        color: var(--secondary-text-color);
+        background-color: var(--primary-color);
+      }
+    }
+  }
+  .header__nav {
+    display: flex;
+    :not(:last-child) {
+      margin-right: toRem(36px);
+    }
+    li {
+      &:first-child {
+        color: var(--secondary-color);
+        padding-bottom: toRem(10px);
+        border-bottom: toRem(5px) solid var(--primary-color);
+      }
+      &:nth-child(n + 2) {
+        &:hover,
+        &:focus {
+          color: var(--secondary-color);
+          padding-bottom: toRem(10px);
+          border-bottom: toRem(5px) solid var(--primary-color);
+          transition: all 0.15s ease-in-out;
+        }
+      }
+    }
+    a {
+      @include footer-middle-text;
+      font-weight: 700;
+    }
+  }
+}

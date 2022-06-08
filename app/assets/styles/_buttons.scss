@@ -1,0 +1,80 @@
+@import './functions.scss';
+@import './placeholder';
+@import './mixins.scss';
+
+.app-primari-button {
+  width: toRem(140px);
+  height: toRem(51px);
+  background-color: inherit;
+  border: toRem(1px) solid var(--primary-color);
+  border-radius: toRem(2px);
+
+  &:hover,
+  &:focus {
+    @extend %shadow;
+  }
+}
+.app-secondary-button {
+  width: toRem(186px);
+  height: toRem(54px);
+  background-color: inherit;
+  border: toRem(1px) solid var(--primary-color);
+  border-radius: toRem(2px);
+  &:hover {
+    @extend %shadow;
+  }
+  &:focus {
+    @extend %shadow;
+  }
+}
+.app-smal-button {
+  width: toRem(102px);
+  height: toRem(51px);
+  background-color: inherit;
+  border: toRem(1px) solid var(--primary-color);
+  border-radius: toRem(2px);
+  &:hover {
+    @extend %shadow;
+  }
+  &:focus {
+    @extend %shadow;
+  }
+}
+
+.app-tittle-button {
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: toRem(16px);
+  line-height: 1.11;
+  width: 92px;
+  color: var(--secondary-color);
+  background: linear-gradient(
+    to top,
+    var(--tittle-button-color) 50%,
+    var(--secondary-text-color) 50%
+  );
+  &:hover,
+  &:focus {
+    @extend %shadow-title;
+  }
+}
+
+.menu__buttons {
+  display: flex;
+  justify-content: center;
+  .menu__button {
+    width: 100%;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: toRem(14px);
+    line-height: 1.117;
+    &:not(:last-child) {
+      margin-right: toRem(20px);
+      color: var(--primary-color);
+    }
+    &:last-child {
+      color: var(--secondary-text-color);
+      background-color: var(--primary-color);
+    }
+  }
+}

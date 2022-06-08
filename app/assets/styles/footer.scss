@@ -1,0 +1,114 @@
+@import './mixins.scss';
+
+.footer {
+  display: flex;
+  background-color: rgba(236, 235, 255, 0.6);
+  padding: toRem(50px) 0 toRem(30px) 0;
+  @include respond-to(xxs) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+  }
+  @include respond-to(sm-lg) {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100vw;
+    z-index: 0;
+  }
+  @include respond-to(lg) {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    padding-top: 200px;
+    background-color: rgba(236, 235, 255);
+  }
+}
+.footer__contact {
+  display: flex;
+  a {
+    @include footer-middle-text;
+    color: var(--text-color);
+    &:hover {
+      color: var(--primary-color);
+      transition: all 0.15s ease-in-out;
+    }
+  }
+  h3 {
+    @include footer-large-text;
+    &:not(:last-child) {
+      margin-bottom: toRem(20px);
+    }
+  }
+  li {
+    &:not(:last-child) {
+      margin-bottom: toRem(8px);
+    }
+  }
+  @include respond-to(xxs-sm) {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: toRem(77px);
+    div {
+      width: 30vw;
+      &:nth-child(-n + 2) {
+        margin-bottom: toRem(30px);
+      }
+    }
+  }
+  @include respond-to(xxs-sm) {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: toRem(77px);
+
+    div {
+      // width: 25vw;
+      &:nth-child(2n + 1) {
+        margin-right: 30vw;
+      }
+      &:nth-child(-n + 2) {
+        margin-bottom: toRem(30px);
+      }
+    }
+  }
+  @include respond-to(sm) {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: toRem(77px);
+  }
+}
+.footer__license {
+  display: flex;
+  justify-content: space-between;
+  p {
+    @include footer-smal-text;
+    color: var(--text-color);
+  }
+}
+
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: toRem(32px);
+    height: toRem(32px);
+    background-color: var(--secondary-text-color);
+    &:hover {
+      background-color: var(--primary-color);
+      border-radius: toRem(3px);
+      transition: all 0.15s ease-in-out;
+    }
+  }
+}
